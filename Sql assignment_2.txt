@@ -1,0 +1,15 @@
+
+Introducing Relational Databasee
+
+1) Which field of the Customers table is the primary key?
+=>Cnum
+
+2)What is the 4th column of the Customer table?
+=>Rating.
+
+3)What is the another word for row?For column?
+=>row:-entity,tuple
+  column:-attribute,method.
+
+4)why isn't it possible to see the first five rows of a table?
+=>because at the time insert we declare the which entity's insert in table.
