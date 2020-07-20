@@ -1,0 +1,38 @@
+1. Display all the Supplier names with the inial letter capital.
+=>select concat(upper(substr(Sname,1,1)),lower(substr(Sname,2))) as name from S;
+
+
+2.Display all the Supplier names in upper case.
+
+=>SELECT UPPER(Sname) 
+   FROM S;
+
+
+3.Display all the Supplier names in lower case.
+=>SELECT LOWER(Sname) 
+   FROM S;
+
+4.display all the supplier names padded to 25 characters,with spaces on the left.
+=>select lpad(Sname,25,' ') from S;
+
+5.display all the Supplier names(with 'la' replaced to 'ro').
+  Hint:REPLACE
+=>select REPLACE(Sname,'la','ro')from S;
+
+6.Implement the above command such that 'l' is replaced with 'r' and 'a' is replaced with 'o'.
+=>select replace(replace(Sname,'l','r'),'a','o')from S;
+
+7.Display the Supplier names and the lengths of the names.
+=>select sname,length (sname) from S;
+
+
+8.Use the soundex function to search for a supplier by the name of 'BLOKE';
+=>select *from S where soundex(Sname)=soundex('Siyaaa');
+
+9.Display the Supplier name and the Status(as Ten,Twenty,Thirty,etc.)
+=>SELECT dayname("2020-07-20") from dual;
+ 
+
+10.Display the current day(e.g. Thursday).
+
+
