@@ -1,0 +1,25 @@
+#SUMMARIZATION DATA WITH AGGREGATE FUNCTION.
+
+1. Write a query that counts all orders for OCTOBER 3.
+=>SELECT COUNT(*) FROM ORDERS
+  WHERE Odate='1990-10-03';
+
+
+2.Write a query that counts the number of different non_NULL city values in the Customers table.
+=>SELECT COUNT(CNUM) FROM CUSTOMERS;
+ 
+
+3.Write a query that selects each customer's smallest order.
+=>select Cnum,min(amt) from ORDERS GROUP BY Cnum;
+  select Cnum,Amt from ORDERS group by Cnum order by Amt;
+
+
+4.Write a query that selects the first customer,in alphabetical order,whose name begins with G.
+=>SELECT Cname from CUSTOMERS WHERE Cname like 'G%' order by Cname limit 1;
+
+
+5.Write a query that selects the highest rating in each city.
+=>select City,max(rating) from CUSTOMERS GROUP BY City;
+
+6.Write a query that counts the number of salespeople registering orders for each day.(If a salesperson has more than order on gien day,he or she should be counted only once).
+=>SELECT Odate,count(distinct Snum) from ORDERS GROUP BY Odate;
